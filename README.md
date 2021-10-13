@@ -1,6 +1,8 @@
-# uifrom
+# Budddy-Chatbot
 
-A new Flutter project.
+Budddy-Chatbot is just a showcase of the wonderful UI done by Mrh Raju
+
+
 
 ## Getting Started
 
