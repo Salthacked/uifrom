@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:uifrom/models/TopAppBar.dart';
+import 'package:uifrom/constants.dart';
+import 'package:uifrom/models/TopAppbars.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -15,7 +16,18 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
         child: Stack(children: <Widget>[
-      TopappBar(),
+          Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                  width: 390,
+                  height: 301,
+                  decoration: BoxDecoration(
+                    color: kBlackColor,
+                  ))),
+          TopAppbars(
+            title: 'Messages',
+          ),
       Positioned(
           top: 136,
           left: 24,
@@ -182,7 +194,7 @@ class _BodyState extends State<Body> {
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(
                       horizontal: 20, vertical: 9),
-                  hintText: "Search contacts",
+                  hintText: "Tye your Email",
                    ),
 
             ),

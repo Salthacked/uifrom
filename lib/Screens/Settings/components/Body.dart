@@ -12,22 +12,31 @@ class Body extends StatelessWidget {
     return Container(
       child: Stack(
         children: <Widget>[
+
+          Positioned(
+            top: 1,
+            left: 0,
+            child: Container(
+                width: 390,
+                height: 604,
+                decoration: BoxDecoration(
+                  image : DecorationImage(
+                      image: AssetImage('assets/images/firstimage.png'),
+                      fit: BoxFit.fitWidth
+                  ),
+                )),),
           TopappBar(
             title: 'Settings',
           ),
 
-          Positioned(
-              top: -117,
-              left: 0,
-              child: Container(
-              width: 390,
-              height: 604,
+          Container(
+          width: 390,
+          height: 604,
     child: SvgPicture.asset(
     'assets/images/vector.svg',
     semanticsLabel: 'vector'
 
-              ),
-              ),
+          ),
           ),
           Positioned(
               top: -623,

@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:uifrom/constants.dart';
 class TopappBar extends StatelessWidget {
   const TopappBar({
     this.title,
@@ -27,7 +28,7 @@ class TopappBar extends StatelessWidget {
             title!,
             textAlign: TextAlign.left,
             style: TextStyle(
-                color: Color.fromRGBO(32, 34, 38, 1),
+                color: kTextColor,
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
                 height: 1.25),

@@ -1,5 +1,6 @@
 import  'package:flutter/widgets.dart' ;
 import 'package:uifrom/Screens/Contact/ContactScreen.dart';
+import 'package:uifrom/Screens/Conversation/ConversationScreen.dart';
 import 'package:uifrom/Screens/Firstage/FirstScreen.dart';
 import 'package:uifrom/Screens/HomeScreen/HomeScreen.dart';
 import 'package:uifrom/Screens/MessagesScreen/MessagesScreen.dart';
@@ -17,5 +18,5 @@ final  Map < String ,  WidgetBuilder >  routes  =  {
   ServicesScreen .routeName :  (context)  =>  ServicesScreen (),
   SettingScreen .routeName :  (context)  =>  SettingScreen (),
   MessagesScreen .routeName :  (context)  =>  MessagesScreen (),
-
+  ConversationScreen.routeName :  (context)  =>  ConversationScreen (),
 };

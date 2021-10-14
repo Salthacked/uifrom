@@ -63,8 +63,7 @@ class RecentConversationListWidget extends StatelessWidget {
             decoration: BoxDecoration(),
             padding:
             EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   'Hey There, Budddy Updates...',
@@ -72,10 +71,10 @@ class RecentConversationListWidget extends StatelessWidget {
                   style: TextStyle(
                       color: Color.fromRGBO(32, 34, 38, 1),
                       fontFamily: 'Euclid Circular A',
-                      fontSize: 17,
+                      fontSize: 16,
                       letterSpacing:
                       0 /*percentages not used in flutter. defaulting to zero*/,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w500,
                       height: 1.411764705882353),
                 ),
                 SizedBox(height: 4),
