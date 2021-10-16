@@ -38,13 +38,15 @@ class SignUButton extends StatelessWidget   {
         child: Row(
 
           children: <Widget>[
-            Text(
-              text!,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color : color!,
-                  fontSize: 17,
-                  fontWeight: FontWeight.normal,
+            Center(
+              child: Text(
+                text!,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color : color!,
+                    fontSize: 17,
+                    fontWeight: FontWeight.normal,
+                ),
               ),
             ),
           ],
