@@ -17,67 +17,59 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Container(
-          width: 390,
-          height: 844,
-          child: Stack(children: [
-            Positioned(
-                top: 56,
-                left: 24,
-                child: Container(
-                  decoration: BoxDecoration(),
-                  padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      HeadingWidget(),
-                    ],
-                  ),
-                )),
-            Positioned(top: 136, left: 24, child: BudddypremiumWidget()),
-            Positioned(top: 326, left: 24, child: MonthlyreportsWidget()),
-            Positioned(
-              top: 473,
-              left: 24,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Link Services',
-                    style: TextStyle(
-                        color: Color.fromRGBO(32, 34, 38, 1.0),
-                        fontSize: 17,
-                        fontWeight: FontWeight.w500,
-                        height: 1.411764705882353),
-                  ),
-                  SizedBox(height: 16),
-                  Row(
-                    children: [
-                      LinkservicesWidget(
-                        media: 'Facebook',
-                        chat: '2541',
-                        send: '2541',
-                        image: 'assets/icons/Facebook.png',
-                        press: () =>
-                            Navigator.pushNamed(context, ResultScreen.routeName),
-                      ),
-                      SizedBox(
-                        width: 16,
-                      ),
-                      LinkservicesWidget(
-                        media: 'Twitter',
-                        chat: '2541',
-                        send: '2541',
-                        image: 'assets/icons/twitter.png',
-                        press: () => Navigator.pushNamed(
-                            context, ServicesScreen.routeName),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            children: [
+              SizedBox(height: 24,),
+              HeadingWidget(),
+            SizedBox(height: 32,),
+            BudddypremiumWidget(),
+
+          SizedBox(height: 24,),
+
+          MonthlyreportsWidget(),
+          SizedBox(height: 24,),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Link Services',
+                      style: TextStyle(
+                          color: Color.fromRGBO(32, 34, 38, 1.0),
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          height: 1.411764705882353),
+                    ),
+                    SizedBox(height: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        LinkservicesWidget(
+                          media: 'Facebook',
+                          chat: '2541',
+                          send: '2541',
+                          image: 'assets/icons/Facebook.png',
+                          press: () =>
+                              Navigator.pushNamed(context, ResultScreen.routeName),
+                        ),
+
+                        LinkservicesWidget(
+                          media: 'Twitter',
+                          chat: '2541',
+                          send: '2541',
+                          image: 'assets/icons/twitter.png',
+                          press: () => Navigator.pushNamed(
+                              context, ServicesScreen.routeName),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+
+            ],
+          ),
         ),
       ),
     );

@@ -47,6 +47,7 @@ class KingingWidget extends StatelessWidget {
   ;
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
 
 
@@ -55,7 +56,7 @@ class KingingWidget extends StatelessWidget {
         children: <Widget>[
           Container(
             height: 83,
-            width: 163,
+            width: size.width *.42,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(14),

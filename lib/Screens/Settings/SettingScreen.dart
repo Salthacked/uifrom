@@ -12,7 +12,45 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      extendBodyBehindAppBar: true,
+
       backgroundColor: kbackgroundColor,
+      appBar: AppBar(
+
+        backgroundColor: Colors.transparent,
+        title: Text(
+          'Messages',
+          style: TextStyle(
+            color: kTextColor,
+          ),
+        ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.more_vert,
+                color: kTextColor,
+                semanticLabel: 'menu',
+              ),
+              onPressed: () {}),
+        ],
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.chevron_left_outlined,
+                color: kTextColor,
+                semanticLabel: 'back',
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
+      ),
       body: Body(),
 
     );

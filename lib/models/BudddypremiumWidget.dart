@@ -10,11 +10,12 @@ class BudddypremiumWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        Stack(children: <Widget>[
-          Container(
-            width: 342,
+        Stack(children: [
+           Container(
+            width: size.width,
             height: 166,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
@@ -23,80 +24,86 @@ class BudddypremiumWidget extends StatelessWidget {
               color: kBlackColor,
             ),
             child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
 
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Budddy Premium',
-                    style: TextStyle(
-                        color: kbackgroundColor,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w700,
-                        height: 1.411764705882353),
-                  ),
-                  SizedBox(height: 6),
-                  Text(
-                    'Unlock Budddy premium to \nunlock all features.',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        color: kTextHashColor,
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                        height: 1.4285714285714286),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    height: 41,
-                    width: 97,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Budddy Premium',
+                        style: TextStyle(
+                            color: kbackgroundColor,
+                            fontSize: 17,
+                            fontWeight: FontWeight.w700,
+                            height: 1.411764705882353),
                       ),
-                      color: Color.fromRGBO(236, 176, 26, 1),
-                    ),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    child: Text(
-                      'Upgrade',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 1),
-                          fontSize: 14,
-                          letterSpacing:
-                              0 /*percentages not used in flutter. defaulting to zero*/,
-                          fontWeight: FontWeight.normal,
-                          height: 1.4285714285714286),
-                    ),
+                      SizedBox(height: 6),
+                      Text(
+                        'Unlock Budddy premium to \nunlock all features.',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: kTextHashColor,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                            height: 1.4285714285714286),
+                      ),
+                      SizedBox(height: 10),
+                      Container(
+                        height: 41,
+                        width: 97,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                          color: Color.fromRGBO(236, 176, 26, 1),
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        child: Text(
+                          'Upgrade',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontSize: 14,
+                             fontWeight: FontWeight.normal,
+                               ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+
+
+
+
             ),
-
-    ),
-
           Positioned(
             top: 10,
             left: 193,
-            child: //Mask holder Template
-            Container(
+            child: Container(
               width: 199,
               height: 199,
+              decoration: BoxDecoration(
+    borderRadius : BorderRadius.only(
+    bottomRight: Radius.circular(32),
+              ),),
               child: Image.asset(
                 "assets/images/Crown.png",
-              ),
-            ),
+
+              )
+
+
+    ),
           ),
 
 
 
 
+        ],
+    ),
 
 
-        ]
 
-        ),
       ],
     );
   }

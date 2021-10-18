@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uifrom/Screens/Contact/ContactScreen.dart';
 import 'package:uifrom/Screens/Firstage/components/button.dart';
 import 'package:uifrom/Screens/HomeScreen/HomeScreen.dart';
 import 'package:uifrom/constants.dart';
@@ -49,9 +48,11 @@ class Body extends StatelessWidget {
             ],
           ),
         ),
-    Center(
+    Container(
+      height: 54,
+      width: 302,
       child: Text(
-              'Budddy is the most trusted and fast \n chatbot ever made on internet.',
+              'Budddy is the most trusted and fast  chatbot ever made on internet.',
               style: TextStyle(
                 color: kTextHashColor,
                 fontFamily: 'Euclid Circular A',
@@ -71,7 +72,7 @@ class Body extends StatelessWidget {
                 text: 'Signin',
                 color: kBlackColor,
                 press: () =>
-                    Navigator.pushNamed(context, ContactScreen.routeName),
+                    Navigator.pushNamed(context, HomeScreen.routeName),
               ),
 
               SignUButton(

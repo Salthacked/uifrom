@@ -16,7 +16,30 @@ class _ContactScreenState extends State<ContactScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kbackgroundColor,
-
+      appBar: AppBar(
+        title: Text(
+          'Contact',
+          style: TextStyle(
+            color: kTextColor,
+          ),
+        ),
+        backgroundColor: kbackgroundColor,
+        centerTitle: true,
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.more_vert,
+                color: kBlackColor,
+                semanticLabel: 'menu',
+              ),
+              onPressed: () {}),
+        ],
+        leading: Icon(
+          Icons.chevron_left_outlined,
+          color: kBlackColor,
+          semanticLabel: 'back',
+        ),
+      ),
       body: Body(),
       bottomNavigationBar: BottomNavBar(),
     );

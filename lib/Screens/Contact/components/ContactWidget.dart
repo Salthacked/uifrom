@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:uifrom/constants.dart';
 
 class ContactWidget extends StatelessWidget {
   const ContactWidget({
@@ -24,10 +22,11 @@ class ContactWidget extends StatelessWidget {
                 offset: Offset(0, 16),
                 blurRadius: 32)
           ],
-          color: kbackgroundColor,
+          color: Color(0xFFF5F8FC),
         ),
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-        child: Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
+        child: Row(
+            children: <Widget>[
           Container(
               width: 64,
               height: 64,
@@ -37,8 +36,7 @@ class ContactWidget extends StatelessWidget {
                     height: 64,
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(230, 243, 255, 1),
-                      borderRadius:
-                      BorderRadius.all(Radius.elliptical(64, 64)),
+                      borderRadius: BorderRadius.all(Radius.elliptical(64, 64)),
                     )),
                 Positioned(
                     top: 13,
@@ -48,20 +46,15 @@ class ContactWidget extends StatelessWidget {
                         height: 38,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage(
-                                  image!),
-                              fit: BoxFit.fitWidth),
+                              image: AssetImage(image!), fit: BoxFit.fitWidth),
                         ))),
               ])),
           SizedBox(width: 16),
           Container(
-            decoration: BoxDecoration(
-
-            ),
+            decoration: BoxDecoration(),
             padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: <Widget>[
                 Text(
                   name!,

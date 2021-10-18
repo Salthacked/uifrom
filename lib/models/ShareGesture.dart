@@ -4,8 +4,12 @@ import 'package:uifrom/Screens/Contact/ContactScreen.dart';
 
 class ShareGesture extends StatelessWidget {
   const ShareGesture({
+    this.image,
+    this.colors,
     Key? key,
   }) : super(key: key);
+  final String? image;
+  final Color? colors;
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +22,12 @@ class ShareGesture extends StatelessWidget {
           borderRadius: BorderRadius.all(
             Radius.circular(13),
           ),
-          color: Color.fromRGBO(165, 166, 246, 0.14901960784313725),
+           color: colors,
         ),
         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         child: Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
           SvgPicture.asset(
-            'assets/icons/share.svg',
+            image!,
             color: Color.fromRGBO(93, 95, 239, 1),
           ),
           SizedBox(width: 4),

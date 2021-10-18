@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uifrom/constants.dart';
-import 'package:uifrom/models/TopAppbars.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -14,211 +13,249 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Stack(children: <Widget>[
-          Positioned(
-              top: 0,
-              left: 0,
-              child: Container(
-                  width: 390,
-                  height: 301,
-                  decoration: BoxDecoration(
-                    color: kBlackColor,
-                  ))),
-          TopAppbars(
-            title: 'Messages',
-          ),
-      Positioned(
-          top: 136,
-          left: 24,
-          child: Container(
-              width: 230,
-              height: 56,
-              child: Stack(children: <Widget>[
-                Positioned(
-                    top: 0,
-                    left: 0,
-                    child: Container(
-                        width: 56,
-                        height: 56,
-                        child: Stack(children: <Widget>[
-                          Positioned(
-                              top: 0,
-                              left: 0,
-                              child: Container(
-                                  width: 56,
-                                  height: 56,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromRGBO(120, 121, 241, 1),
-                                    borderRadius: BorderRadius.all(
-                                        Radius.elliptical(56, 56)),
-                                  ))),
-                          Positioned(
-                              top: 15,
-                              left: 4,
-                              child: Container(
-                                  width: 47,
-                                  height: 24,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/images/Character19.png'),
-                                        fit: BoxFit.fitWidth),
-                                  ))),
-                        ]))),
-                Positioned(
-                    top: 6,
-                    left: 68,
-                    child: Container(
-                        width: 162,
-                        height: 44,
-                        child: Stack(children: <Widget>[
-                          Positioned(
-                              top: 0,
-                              left: 0,
-                              child: Text(
-                                'Budddy Usual Reply Time',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    color: Color.fromRGBO(255, 255, 255, 1),
-                                    fontFamily: 'Euclid Circular A',
-                                    fontSize: 14,
-                                    letterSpacing:
-                                        0 /*percentages not used in flutter. defaulting to zero*/,
-                                    fontWeight: FontWeight.normal,
-                                    height: 1.4285714285714286),
-                              )),
-                          Positioned(
-                              top: 24,
-                              left: 20,
-                              child: Text(
-                                '2 min',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    color: Color.fromRGBO(255, 255, 255, 1),
-                                    fontFamily: 'Euclid Circular A',
-                                    fontSize: 14,
-                                    letterSpacing:
-                                        0 /*percentages not used in flutter. defaulting to zero*/,
-                                    fontWeight: FontWeight.normal,
-                                    height: 1.4285714285714286),
-                              )),
-                        ]))),
-              ]))),
-      Positioned(
-          top: 208,
-          left: 24,
-          child: Text(
-            'This is private message, between you and budddy. this chat is end to end encrypted...',
-            textAlign: TextAlign.left,
-            style: TextStyle(
-                color: Color.fromRGBO(255, 255, 255, 1),
-                fontFamily: 'Euclid Circular A',
-                fontSize: 14,
-                letterSpacing:
-                    0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 1.4285714285714286),
-          )),
-      Positioned(
-          top: 327,
-          left: 274,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10),
-                topRight: Radius.circular(10),
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(0),
+    Size size = MediaQuery.of(context).size;
+    return SafeArea(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+              width: size.width,
+              height: size.height * .2,
+              decoration: BoxDecoration(
+                color: kBlackColor,
               ),
-              color: Color.fromRGBO(32, 34, 38, 1),
-            ),
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Text(
-                  'Hello There',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 56,
+                          height: 56,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(120, 121, 241, 1),
+                            borderRadius: BorderRadius.all(Radius.elliptical(56, 56)),
+                          ),
+                          child: Container(
+                              width: 47,
+                              height: 24,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('assets/images/Character19.png'),
+                                    fit: BoxFit.fitWidth),
+                              )),
+                        ),
+                        SizedBox(width: 16,),
+                        Column(
+
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8.0),
+                              child: Text(
+                          'Budddy Usual Reply Time',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                                color: kbackgroundColor,
+                                fontFamily: 'Euclid Circular A',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                 ),
+                        ),
+                            ),
+
+                            Row(
+                              children: [
+                                Icon(
+
+                                  Icons.schedule_outlined,
+                                  color: kTextHashColor,
+                                  size: 16,
+                                ),
+
+                                SizedBox(width: 4,),
+                                Text(
+                                  '2 min',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: kbackgroundColor,
+                                    fontFamily: 'Euclid Circular A',
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+
+                          ],
+                        )
+
+
+                      ],
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 24),
+                      child: Text(
+                        'This is private message, between you and budddy. this chat is end to end encrypted...',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: kbackgroundColor,
+                          fontFamily: 'Euclid Circular A',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+
+              ),
+
+          ),
+
+          SizedBox(height: 32,),
+
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        child: Row(
+          children: [
+            Spacer(),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius : BorderRadius.all(
+                  Radius.circular(10),
+                ),
+                color : kBlackColor,
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisSize: MainAxisSize.min,
+
+                children: <Widget>[
+                  Text('Hello There', textAlign: TextAlign.center, style: TextStyle(
                       color: Color.fromRGBO(255, 255, 255, 1),
                       fontFamily: 'Euclid Circular A',
                       fontSize: 14,
-                      letterSpacing:
-                          0 /*percentages not used in flutter. defaulting to zero*/,
+                      letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
                       fontWeight: FontWeight.normal,
-                      height: 1.4285714285714286),
+                      height: 1.4285714285714286
+                  ),),
+
+                ],
+              ),
+
+
+
+            ),
+          ],
+        ),
+      ),
+
+          SizedBox(height: 16,),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Container(
+
+              width: size.width *.6,
+              height: size.width *.25,
+
+              decoration: BoxDecoration(
+                borderRadius : BorderRadius.all(
+                   Radius.circular(10),
+                ),
+                color : Color.fromRGBO(235, 236, 239, 1),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Text('Get Notified by Email', textAlign: TextAlign.center, style: TextStyle(
+                      color: Color.fromRGBO(148, 155, 165, 1.0),
+                      fontFamily: 'Euclid Circular A',
+                      fontSize: 14,
+                       fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+            Row(
+              children: [
+                Container(
+                    width: 160,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius : BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                      ),
+                      color : Color.fromRGBO(235, 236, 239, 1),
+                    ),
+                    child: TextField(
+                      onChanged: (value) => print(value),
+                      decoration: InputDecoration(
+                        contentPadding:
+                        EdgeInsets.symmetric(horizontal: 10, vertical: 9),
+                        hintText: "Type your mail",
+
+
+                    ),
+
+                ),
+
+                ),
+                GestureDetector(
+                  onTap: null,
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius : BorderRadius.only(
+                        topRight: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                      color: Color (0xFF5D5FEF),
+                    ),
+                    child: Container(
+                      width: 20,
+                      height: 20,
+
+                      child: SvgPicture.asset(
+
+
+                        'assets/icons/Send.svg',
+                        color: Colors.white,
+                        semanticsLabel: 'send',
+                  ),
+                    ),
+                  ),
                 ),
               ],
             ),
-          )),
-      Positioned(
-          top: 399,
-          left: 24,
-          child: Container(
-              width: 246,
-              height: 102,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                  bottomLeft: Radius.circular(0),
-                  bottomRight: Radius.circular(10),
-                ),
-                color: Color.fromRGBO(235, 236, 239, 1),
-              ))),
-      Positioned(
-          top: 415,
-          left: 40,
-          child: Text(
-            'Get Notified by Email',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color.fromRGBO(148, 155, 165, 1),
-                fontFamily: 'Euclid Circular A',
-                fontSize: 14,
-                letterSpacing:
-                    0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 1.4285714285714286),
-          )),
-      Positioned(
-          top: 445,
-          left: 40,
-          child: Container(
-              width: 214,
-              height: 40,
-            child: TextField(
-              textAlign: TextAlign.start,
-              onChanged: (value) => print(value),
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(
-                      horizontal: 20, vertical: 9),
-                  hintText: "Tye your Email",
-                   ),
 
+                  ],
+                ),
+              ),
             ),
-
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                ),
-                color: Color.fromRGBO(235, 236, 239, 1),
-              )
           ),
 
+
+        ],
       ),
 
-      Positioned(
-        top: 445,
-        left: 214,
-        child: SvgPicture.asset('assets/images/rectangle10.svg',
-            semanticsLabel: 'rectangle10',
-
-        ),
-
-      ),
-
-    ]));
+    );
   }
 }

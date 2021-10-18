@@ -151,9 +151,7 @@ class BottomNavBar extends StatelessWidget {
                         style: TextStyle(
                             color: kTextHashColor,
                             fontSize: 12,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
+                           fontWeight: FontWeight.normal,
                             height: 1.25),
                       ),
                     ],

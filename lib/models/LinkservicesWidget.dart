@@ -16,6 +16,7 @@ class LinkservicesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       child: Container(
         decoration: BoxDecoration(),
@@ -24,7 +25,7 @@ class LinkservicesWidget extends StatelessWidget {
           children: <Widget>[
             Stack(children: <Widget>[
               Container(
-                  width: 163,
+                  width: size.width *.42,
                   height: 222,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
