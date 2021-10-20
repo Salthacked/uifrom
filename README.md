@@ -3,6 +3,39 @@
 Budddy-Chatbot is just a showcase of the wonderful UI done by Mrh Raju
 
 
+## [You can check the Figma File here below](https://www.figma.com/file/xxarQeDEH0hHS2Xlho9mVD/Budddy-Chatbot-Freebie-(Community)?node-id=1%3A2)
+
+
+## [You can Mrh Raju Drible here also](https://dribbble.com/mrhraju)
+
+*Packages we are using:**
+
+- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
+
+
+
+## Screens it contains:
+
+=> Onboarding
+
+=> Home
+
+=> Contact
+
+=> Message
+
+=> Chat
+
+=> Services
+
+=> Settings
+  
+=> Bottom Navigation Bar 
+
+
+## Photos
+![Preview](/cover.png)
+
 
 ## Getting Started
 
