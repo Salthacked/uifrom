@@ -44,7 +44,7 @@ class SettingScreen extends StatelessWidget {
                 semanticLabel: 'back',
               ),
               onPressed: () {
-                Scaffold.of(context).openDrawer();
+                Navigator.pop(context);
               },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );

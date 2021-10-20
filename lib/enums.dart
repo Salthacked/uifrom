@@ -1,0 +1,1 @@
+enum  MenuState  { Home, Contacts, Services, Messages, Settings }

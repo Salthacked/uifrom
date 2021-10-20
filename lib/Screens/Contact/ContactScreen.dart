@@ -41,7 +41,7 @@ class _ContactScreenState extends State<ContactScreen> {
         ),
       ),
       body: Body(),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavBar( ),
     );
   }
 }

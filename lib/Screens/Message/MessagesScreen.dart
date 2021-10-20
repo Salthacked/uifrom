@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:uifrom/Screens/ResultScreen/components/Body.dart';
+
+import 'package:flutter/cupertino.dart';
+import 'package:uifrom/Screens/Message/components/Body.dart';
 import 'package:uifrom/constants.dart';
 
-class ResultScreen extends StatelessWidget {
-  static String routeName = "/Result";
+class MessagesScreen extends StatelessWidget {
+  static String routeName = "/Message";
 
-  const ResultScreen({Key? key}) : super(key: key);
+  const MessagesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kbackgroundColor,
       appBar: AppBar(
         title: Text(
-          'Result',
+          'Messages',
           style: TextStyle(
-            color: kTextColor,
+            color: kbackgroundColor,
           ),
         ),
-        backgroundColor: kbackgroundColor,
+        backgroundColor: kTextColor,
         centerTitle: true,
         actions: [
           IconButton(
               icon: Icon(
                 Icons.more_vert,
-                color: kBlackColor,
+                color: kbackgroundColor,
                 semanticLabel: 'menu',
               ),
               onPressed: () {}),
@@ -34,11 +35,11 @@ class ResultScreen extends StatelessWidget {
             return IconButton(
               icon: const Icon(
                 Icons.chevron_left_outlined,
-                color: kBlackColor,
+                color: kbackgroundColor,
                 semanticLabel: 'back',
               ),
               onPressed: () {
-                Scaffold.of(context).openDrawer();
+                Navigator.pop(context);
               },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );

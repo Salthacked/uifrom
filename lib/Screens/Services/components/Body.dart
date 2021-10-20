@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uifrom/Screens/Conversation/ConversationScreen.dart';
-import 'package:uifrom/Screens/ResultScreen/Result.dart';
+import 'package:uifrom/Screens/Result/Result.dart';
 import 'package:uifrom/Screens/Services/ServicesScreen.dart';
 import 'package:uifrom/models/LinkservicesWidget.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uifrom/Screens/Firstage/components/button.dart';
-import 'package:uifrom/Screens/HomeScreen/HomeScreen.dart';
+import 'package:uifrom/Screens/Home/HomeScreen.dart';
 import 'package:uifrom/constants.dart';
 
 class Body extends StatelessWidget {

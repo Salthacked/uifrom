@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:uifrom/Screens/HomeScreen/components/MonthlyreportsWidget.dart';
-import 'package:uifrom/Screens/ResultScreen/components/StatisticsWidget.dart';
+import 'package:uifrom/Screens/Home/components/MonthlyreportsWidget.dart';
+import 'package:uifrom/Screens/Result/components/StatisticsWidget.dart';
 import 'package:uifrom/models/ShareGesture.dart';
 
 class Body extends StatefulWidget {

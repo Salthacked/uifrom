@@ -2,11 +2,13 @@ import  'package:flutter/widgets.dart' ;
 import 'package:uifrom/Screens/Contact/ContactScreen.dart';
 import 'package:uifrom/Screens/Conversation/ConversationScreen.dart';
 import 'package:uifrom/Screens/Firstage/FirstScreen.dart';
-import 'package:uifrom/Screens/HomeScreen/HomeScreen.dart';
-import 'package:uifrom/Screens/MessagesScreen/MessagesScreen.dart';
-import 'package:uifrom/Screens/ResultScreen/Result.dart';
+import 'package:uifrom/Screens/Home/HomeScreen.dart';
+import 'package:uifrom/Screens/Message/MessagesScreen.dart';
+import 'package:uifrom/Screens/Result/Result.dart';
 import 'package:uifrom/Screens/Services/ServicesScreen.dart';
 import 'package:uifrom/Screens/Settings/SettingScreen.dart';
+
+import 'Screens/Message/MessagesScreen.dart';
 
 // We use name route
 // All our routes will be available here

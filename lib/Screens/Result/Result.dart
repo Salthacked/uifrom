@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter/cupertino.dart';
-import 'package:uifrom/Screens/MessagesScreen/components/Body.dart';
+import 'package:uifrom/Screens/Result/components/Body.dart';
 import 'package:uifrom/constants.dart';
 
-class MessagesScreen extends StatelessWidget {
-  static String routeName = "/MessagesScreen";
+class ResultScreen extends StatelessWidget {
+  static String routeName = "/Result";
 
-  const MessagesScreen({Key? key}) : super(key: key);
+  const ResultScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kbackgroundColor,
       appBar: AppBar(
         title: Text(
-          'Messages',
+          'Result',
           style: TextStyle(
-            color: kbackgroundColor,
+            color: kTextColor,
           ),
         ),
-        backgroundColor: kTextColor,
+        backgroundColor: kbackgroundColor,
         centerTitle: true,
         actions: [
           IconButton(
               icon: Icon(
                 Icons.more_vert,
-                color: kbackgroundColor,
+                color: kBlackColor,
                 semanticLabel: 'menu',
               ),
               onPressed: () {}),
@@ -35,7 +34,7 @@ class MessagesScreen extends StatelessWidget {
             return IconButton(
               icon: const Icon(
                 Icons.chevron_left_outlined,
-                color: kbackgroundColor,
+                color: kBlackColor,
                 semanticLabel: 'back',
               ),
               onPressed: () {

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:uifrom/Screens/Contact/ContactScreen.dart';
-import 'package:uifrom/Screens/HomeScreen/HomeScreen.dart';
-import 'package:uifrom/Screens/MessagesScreen/MessagesScreen.dart';
+import 'package:uifrom/Screens/Home/HomeScreen.dart';
+import 'package:uifrom/Screens/Message/MessagesScreen.dart';
 import 'package:uifrom/Screens/Services/ServicesScreen.dart';
 import 'package:uifrom/Screens/Settings/SettingScreen.dart';
 import 'package:uifrom/constants.dart';
@@ -55,10 +55,8 @@ class BottomNavBar extends StatelessWidget {
                       style: TextStyle(
                           color: Color.fromRGBO(32, 34, 38, 1),
                           fontSize: 12,
-                          letterSpacing:
-                              0 /*percentages not used in flutter. defaulting to zero*/,
-                          fontWeight: FontWeight.normal,
-                          height: 1.25),
+                        fontWeight: FontWeight.normal,
+                          ),
                     ),
                   ],
                 ),
@@ -88,7 +86,7 @@ class BottomNavBar extends StatelessWidget {
                             color: kTextHashColor,
                             fontSize: 12,
                             fontWeight: FontWeight.normal,
-                            height: 1.25),
+                             ),
                       ),
                     ],
                   ),
@@ -117,11 +115,8 @@ class BottomNavBar extends StatelessWidget {
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: kTextHashColor,
-                            fontSize: 12,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1.25),
+                            fontSize: 12, fontWeight: FontWeight.normal,
+                             ),
                       ),
                     ],
                   ),
@@ -152,7 +147,7 @@ class BottomNavBar extends StatelessWidget {
                             color: kTextHashColor,
                             fontSize: 12,
                            fontWeight: FontWeight.normal,
-                            height: 1.25),
+                            ),
                       ),
                     ],
                   ),
@@ -180,13 +175,10 @@ class BottomNavBar extends StatelessWidget {
                         'Settings',
                         textAlign: TextAlign.left,
                         style: TextStyle(
-                            color: kTextHashColor,
-                            fontFamily: 'Baloo Tamma',
+                            color: kTextHashColor, 
                             fontSize: 12,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1.25),
+                             fontWeight: FontWeight.normal,
+                             ),
                       ),
                     ],
                   ),
@@ -196,6 +188,8 @@ class BottomNavBar extends StatelessWidget {
           ),
         ],
       ),
+
+
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter/cupertino.dart';
-import 'package:uifrom/Screens/MessagesScreen/components/RecentConversationListWidget.dart';
-import 'package:uifrom/Screens/MessagesScreen/components/StartconversationWidget.dart';
+import 'package:uifrom/Screens/Message/components/RecentConversationListWidget.dart';
+import 'package:uifrom/Screens/Message/components/StartconversationWidget.dart';
 import 'package:uifrom/constants.dart';
 
 class Body extends StatefulWidget {

@@ -25,12 +25,15 @@ class ConversationScreen extends StatelessWidget {
       centerTitle: true,
       actions: [
         IconButton(
+
             icon: Icon(
               Icons.more_vert,
               color: kbackgroundColor,
               semanticLabel: 'menu',
             ),
-            onPressed: () {}),
+            onPressed: () {
+
+            }),
       ],
       leading: Builder(
         builder: (BuildContext context) {
@@ -41,7 +44,7 @@ class ConversationScreen extends StatelessWidget {
               semanticLabel: 'back',
             ),
             onPressed: () {
-              Scaffold.of(context).openDrawer();
+              Navigator.pop(context);
             },
             tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
           );
