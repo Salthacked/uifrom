@@ -34,7 +34,7 @@ Budddy-Chatbot is just a showcase of the wonderful UI done by Mrh Raju
 
 
 ## Photos
-![Preview](/cover.png)
+![Preview](https://github.com/Salthacked/uifrom/blob/master/Cover.png)
 
 
 ## Getting Started
